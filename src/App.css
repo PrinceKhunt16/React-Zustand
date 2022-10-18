@@ -1,5 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+
+* {
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.heading {
+    font-size: 2.5rem;
+    margin: 0;
+    margin-bottom: 2rem;
+    font-family: 'Caveat Brush';
+    font-weight: 500;
+}
+
 ul {
     padding: 0;
+    margin: 0;
 }
 
 .main-container {
@@ -18,37 +38,63 @@ ul {
     justify-content: center;
     align-items: center;
     width: 100%;
-
+    margin: 0;
+    position: relative;
+    max-width: 400px;
 }
 
 .form-input {
-    padding: 0.75rem;
     outline: none;
-    border: 1px solid rgb(247, 247, 247);
-    width: 18rem;
+    border: 1px solid #f7f7f7;
+    background-color: #ececec;
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    padding-left: 15px;
+    font-family: 'Caveat Brush';
+    font-size: 24px;
+    font-weight: 500;
+    border-radius: 25px;
 }
 
 .form-submit-btn {
-    background-color: #666;
-    padding: 0.75rem;
-    border: 1px solid #666;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
+    position: absolute;
+    right: 0;
+    background-color: #c6c6c6;
+    height: 50px;
+    font-family: 'Caveat Brush';
+    border: 1px solid #c6c6c6;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: 500;
+    padding: 0px 10px;
     cursor: pointer;
+    border-radius: 25px;
 }
 
 .course-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 24rem;
+    width: 400px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    border: 2px solid white;
+    border: 1px solid #e1e1e1;
     margin: 1rem 0;
     padding: 1rem;
     font-weight: bold;
+}
+
+.course-name-check-box {
+    display: flex;
+    margin: 0;
+    gap: 10px;
+}
+
+.course-name-check-box span label {
+    font-size: 24px;
+    font-family: 'Caveat Brush';
+    font-weight: 500;
 }
 
 .course-item-col-1 {
@@ -58,11 +104,58 @@ ul {
     gap: 5px;
 }
 
-.delete-btn {
-    padding: 0.5rem;
-    color: white;
-    background-color: #ff0000cc;
-    border-radius: 5px;
-    border: none;
+.course-item-col-1 input {
+    width: 0;
+}
+
+[type="checkbox"] {
+    opacity: 0;
+}
+
+[type="checkbox"] + label {
+    position: relative;
+    padding-left: 25px;
     cursor: pointer;
+    display: inline-block;
+    color: #dddddd;
+    line-height: 25px;
+}
+
+[type="checkbox"] + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 17px;
+    height: 17px;
+    outline: none;
+    background: #fff;
+    border-radius: 50%;
+}
+
+[type="checkbox"]:checked + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 17px;
+    height: 17px;
+    outline: none;
+    background: #727272;
+    border-radius: 50%;
+}
+
+.delete-btn {
+    margin: 0;
+    padding-top: 2px;
+    height: 35px;
+    width: 35px;
+    color: #ff0000cc;
+    background-color: transparent;
+    border: 1px solid #ff0000cc;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;   
+    font-family: 'Caveat Brush';
+    font-weight: lighter;
 }

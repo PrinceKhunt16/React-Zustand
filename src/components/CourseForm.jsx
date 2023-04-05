@@ -16,10 +16,17 @@ const CourseForm = () => {
         setCourseTitle("");
     }
 
+    const handleAnotherWayToSubmit = (e) => {
+        if(e.key == 'Enter' && courseTitle != '') {
+            handleCourseSubmit()
+        }
+    }
+
     return (
         <div className="form-container">
             <input
                 value={courseTitle}
+                onKeyDown={(e) => handleAnotherWayToSubmit(e)}
                 onChange={(e) => {
                     setCourseTitle(e.target.value)
                 }}

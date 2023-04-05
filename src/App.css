@@ -25,8 +25,8 @@ ul {
 .main-container {
     padding: 2rem;
     height: 100vh;
-    background-color: #1e1e1e;
-    color: #fff;
+    background-color: #e4e4e4;
+    color: #000;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -63,13 +63,15 @@ ul {
     background-color: #535353;
     height: 50px;
     font-family: 'Caveat Brush';
-    border: 1px solid #535353;
+    border: none;
     color: #e8e8e8;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
     padding: 0px 10px;
     cursor: pointer;
     border-radius: 25px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
 }
 
 .course-item {
@@ -79,7 +81,7 @@ ul {
     width: 400px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    border: 1px solid #e1e1e1;
+    border: 1px solid #9e9e9e;
     margin: 1rem 0;
     padding: 1rem;
     font-weight: bold;
@@ -117,7 +119,7 @@ ul {
     padding-left: 25px;
     cursor: pointer;
     display: inline-block;
-    color: #dddddd;
+    color: #535353;
     line-height: 25px;
 }
 
